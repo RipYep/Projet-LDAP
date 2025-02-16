@@ -4,6 +4,27 @@ Intégration de l’authentification LDAP à Wordpress.
 
 ---
 
+## Table des matières
+1. [Présentation du projet](#présentation-du-projet)
+2. [Installation et configuration du serveur LDAP](#installation-et-configuration-du-serveur-ldap)
+   - [Installation de LDAP sur le serveur](#installation-de-ldap-sur-le-serveur)
+   - [Création de la structure LDAP](#création-de-la-structure-ldap)
+3. [Création des fichiers LDIF à partir d’un fichier CSV](#création-des-fichiers-ldif-à-partir-dun-fichier-csv)
+   - [Structure du fichier user.csv](#structure-du-fichier-usercsv)
+   - [Fichiers générés](#fichiers-générés)
+4. [Gestion des utilisateurs et des groupes LDAP](#gestion-des-utilisateurs-et-des-groupes-ldap)
+   - [Importation des fichiers dans LDAP](#importation-des-fichiers-dans-ldap)
+5. [Mise en place de la partie Web](#mise-en-place-de-la-partie-web)
+   - [Installation d’Apache et des modules nécessaires](#installation-dapache-et-des-modules-nécessaires)
+   - [Création du répertoire de l'application](#création-du-répertoire-de-lapplication)
+6. [Intégration de WordPress avec LDAP](#intégration-de-wordpress-avec-ldap)
+   - [Installation de WordPress](#installation-de-wordpress)
+   - [Configuration de la base de données](#configuration-de-la-base-de-données)
+   - [Installation du plugin LDAP pour WordPress](#installation-du-plugin-ldap-pour-wordpress)
+   - [Activation de l’authentification LDAP dans WordPress](#activation-de-lauthentification-ldap-dans-wordpress)
+
+---
+
 ## Présentation du projet
 
 Ce projet consiste à mettre en place un annuaire `LDAP` *_(Lightweight Directory Access Protocol)_* permettant la gestion centralisée des utilisateurs et groupes d’un établissement. Une interface web a été développée pour interagir avec l’annuaire et une intégration avec `WordPress` a été réalisée pour l’authentification des utilisateurs.
