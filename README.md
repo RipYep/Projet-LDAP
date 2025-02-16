@@ -6,7 +6,7 @@ Intégration de l’authentification LDAP à Wordpress.
 
 ## Présentation du projet
 
-Ce projet consiste à mettre en place un annuaire LDAP (Lightweight Directory Access Protocol) permettant la gestion centralisée des utilisateurs et groupes d’un établissement. Une interface web a été développée pour interagir avec l’annuaire et une intégration avec WordPress a été réalisée pour l’authentification des utilisateurs.
+Ce projet consiste à mettre en place un annuaire `LDAP` *_(Lightweight Directory Access Protocol)_* permettant la gestion centralisée des utilisateurs et groupes d’un établissement. Une interface web a été développée pour interagir avec l’annuaire et une intégration avec `WordPress` a été réalisée pour l’authentification des utilisateurs.
 
 ## Installation et configuration du serveur LDAP
 
@@ -20,7 +20,7 @@ Ce projet consiste à mettre en place un annuaire LDAP (Lightweight Directory Ac
    ```bash
    sudo echo "127.0.1.1 iut5-kourou.home" | sudo tee -a /etc/hosts
    ```
-3. Installation du serveur LDAP (slapd) :
+3. Installation du serveur LDAP (`slapd`) :
    ```bash
    sudo apt install slapd -y
    ```
@@ -55,7 +55,7 @@ memberUid: alice.martin
 
 ## Création des fichiers LDIF à partir d’un fichier CSV
 
-Un script Python a été développé pour convertir un fichier CSV en fichiers LDIF.
+Un script Python a été développé pour convertir un fichier `CSV` en fichiers `LDIF`.
 
 ### Structure du fichier `user.csv`
 ```
