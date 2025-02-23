@@ -1,0 +1,105 @@
+/* Global font settings */
+* {
+  font-family: 'Ubuntu', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body settings */
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper adjustments */
+.wrapper {
+  width: 100%;
+  max-width: 400px; /* Set a maximum width for the form */
+  padding: 30px 20px; /* Adjusted padding */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form .inputSpan {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+  border-radius: 0.5rem;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: rgba(156, 156, 156, 0.1);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus {
+  border-color: #58bc82;
+}
+
+.label {
+  margin-bottom: 10px;
+  color: #58bc82;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.form .submit {
+  padding: 12px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #58bc82;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.form .submit:hover {
+  background-color: #46a96e; /* Slightly darker green */
+  transform: scale(1.02); /* Slight zoom effect */
+}
+
+.span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #707070;
+}
+
+.span a {
+  color: #58bc82;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.span a:hover {
+  color: #46a96e; /* Darker green on hover */
+}

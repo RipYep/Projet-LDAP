@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS files -->
+  <link rel='stylesheet' type='text/css' href='./css/login.css' media='screen' />
+  <link rel='stylesheet' type='text/css' href='./css/01_mobile.css' media='screen' />
+  <link rel='stylesheet' type='text/css' href='./css/02_fonts.css' media='screen' />
+  <link rel='stylesheet' type='text/css' href='./css/03_icons.css' media='screen' />
+
+  <title>Connection LDAP</title>
+
+  <!-- Icon -->
+  <link rel='icon' type='image/png' href='./medias/ldapLogo.jpeg' />
+
+</head>
+<body>
+  <div class='wrapper'>
+    <h2>Log in as an admin</h2>
+
+    <form action='./checkAdminLogin.php' method='POST' class='form'>
+      <span class="inputSpan">
+        <label for="login" class="label">Login</label>
+        <p><input type='text' name='login' id="login"/></span></p>
+
+        <span class="inputSpan">
+          <label for="password" class="label">Password</label>
+          <p><input type='password' name="pwd" id="password"/></span></p>
+
+          <p><input class="submit" type="submit" value="Log in" /></p>
+
+          <p><span class="span"><a href='index.html'>Sign in as user</a></span></p>
+          <p><span class="span"><a href='ldapAnonyme.php'>Sign in as Anonyme</a></span></p>
+          <p><span class="span"><a href='wordpress/wp-admin/'>Sign in on wordpress account</a></span></p>
+        </form>
+
+      </div>
+    </body>
+    </html>

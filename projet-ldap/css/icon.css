@@ -1,0 +1,52 @@
+/*==============================
+Classes
+==============================*/
+
+/* Icon style */
+.editIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sendIcon {
+  padding-left: 12px;
+  font-size: 20px;
+}
+
+/* CSS to rotate the icon */
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.logoutIcon {
+  font-size: 22px;
+  padding-left: 4px;
+}
+
+/* Edit icon style */
+.editUserIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #007bff;
+}
+
+.editUserIcon:hover {
+  color: #0056b3;
+}
+
+/* Style pour le bouton et le texte */
+.editButton {
+  display: inline-flex;
+  align-items: middle;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

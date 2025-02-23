@@ -1,0 +1,138 @@
+/*------------------------------------------------------------------------------
+WEB: page design
+------------------------------------------------------------------------------*/
+
+/*==============================
+Layout
+==============================*/
+
+/* Body & Wrapper */
+.wrapper {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  padding: 1px;
+}
+
+/*==============================
+Style
+==============================*/
+
+/* Set font */
+* {
+  font-family: 'Ubuntu', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+}
+
+/* Body & Wrapper */
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+  background-image: url("../medias/ldapLogo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  background-color: #F6F6F6;
+  padding: 0 10px;
+}
+
+/* Header and navigation style */
+header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 0;
+}
+
+header nav ul li:not(:last-child) {
+  flex-grow: 1;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+header nav ul li:last-child {
+  margin-left: auto;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+header nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Section title style */
+h1, h2 {
+  display: block;
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  background-color: white;
+}
+
+/*==============================
+Responsive design
+==============================*/
+
+/* Media query: mobile */
+@media (max-width: 600px) {
+  /* Add responsive styles for mobile */
+}
+
+/* Media query: tablet */
+@media (min-width: 600px) and (max-width: 1200px) {
+  /* Add responsive styles for tablet */
+}
+
+/* Media query: laptop */
+@media (min-width: 1200px) {
+  /* Add responsive styles for laptop */
+}
