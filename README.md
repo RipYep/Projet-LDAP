@@ -7,13 +7,14 @@ Intégration de l’authentification LDAP à Wordpress.
 ## Table des matières
    - [Présentation du projet](#présentation-du-projet)
    - [Structure de la base LDAP](#structure-de-la-base-ldap)
-   - [Interface de connexion admin](#interface-de-connexion-admin)
-   - [Administration LDAP depuis le compte admin](#administration-ldap-depuis-le-compte-admin)
-   - [Ajouter une entrée dans la base LDAP](#ajouter-une-entrée-dans-la-base-ldap)
-   - [Connexion sur compte utilisateur](#connexion-sur-compte-utilisateur)
-   - [Intégrer la base de données Wordpress](#intégrer-la-base-de-données-wordpress)
-   - [Connexion en tant qu'admin sur Wordpress](#connexion-en-tant-quadmin-sur-wordpress)
-   - [Connexion en tant qu'utilisateur normale](#connexion-en-tant-quutilisateur-normale)
+   1. [Site web pour administrer la base LDAP](#site-web-pour-administrer-la-base-ldap)
+      - [Interface de connexion admin](#interface-de-connexion-admin)
+      - [Administration LDAP depuis le compte admin](#administration-ldap-depuis-le-compte-admin)
+      - [Ajouter une entrée dans la base LDAP](#ajouter-une-entrée-dans-la-base-ldap)
+      - [Connexion sur compte utilisateur](#connexion-sur-compte-utilisateur)
+   2. [Wordpress](#wordpress)
+      - [Connexion en tant qu'admin sur Wordpress](#connexion-en-tant-quadmin-sur-wordpress)
+      - [Connexion en tant qu'utilisateur normale](#connexion-en-tant-quutilisateur-normale)
 
 ---
 
@@ -27,7 +28,9 @@ Ce projet consiste à mettre en place un annuaire `LDAP` *_(Lightweight Director
 
 ---
 
-## Interface de connexion admin
+## Site web pour administrer la base LDAP
+
+### Interface de connexion admin
 Il est possible de se connecter en tant que :
    - `admin`
    - `utilisateur`
@@ -41,9 +44,7 @@ Il est possible de se connecter en tant que :
 
 Le compte `anonyme` n'a aucun droit, il ne peut voir que les entrées dans la branche `People`, tandis que `admin` (étant l'admin) peut voir et intéragir avec n'importe quelle compte dans la base `LDAP`.
 
----
-
-## Administration LDAP depuis le compte admin
+### Administration LDAP depuis le compte admin
 Une fois connecté sur le compte admin, on peut voir toutes les entrées de toutes les branches. Il y a 2 branches :
    - `People` : Contient tous les comptes avec nom, prénom, email, phone, et action (pour supprimer un compte).
    - `Groups` : Contient le groupe auquel l'utilisateur appartient.
@@ -54,9 +55,7 @@ Une fois connecté sur le compte admin, on peut voir toutes les entrées de tout
 > Il est possible de chercher un utilisateur soit en mettant juste son nom ou prénom, soit en mettant, par exemple, `te`, et tous les utilisateurs qui contient `te` dans leur `uid` seront affichés.  
 > Les recherches ne se font pas à partir de leur adresses mail, seulement depuis leur `uid`
 
----
-
-## Ajouter une entrée dans la base LDAP
+### Ajouter une entrée dans la base LDAP
 Pour ajouter une entrée, il suffit juste de remplir :
 >   - Prénom (First name)
 >   - Nom (Last name)
@@ -80,9 +79,7 @@ Si on veut supprimer son compte, on peut. Cliquer sur la croix rouge dans la col
 Maintenant, si on cherche l'utilisateur qu'on vient de supprimer (`test.test`) on pourra voir que l'entrée en question n'existe plus.
 ![15(showuserisdeleted)](https://github.com/user-attachments/assets/b4078d54-1d20-4704-bcee-ac70e3d115f1)
 
----
-
-## Connexion sur compte utilisateur
+### Connexion sur compte utilisateur
 On se connecte sur le compte d'un utilisateur en renseignant son `First Name`, `Last Name` et son mot de passe.
 ![6(testlogin)](https://github.com/user-attachments/assets/83852494-28d2-4e91-9a9c-b1f8c8456492)
 
