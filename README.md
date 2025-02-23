@@ -5,8 +5,15 @@ Intégration de l’authentification LDAP à Wordpress.
 ---
 
 ## Table des matières
-1. [Présentation du projet](#présentation-du-projet)
-   - [](#)
+   - [Présentation du projet](#présentation-du-projet)
+   - [Structure de la base LDAP](#structure-de-la-base-ldap)
+   - [Interface de connexion admin](#interface-de-connexion-admin)
+   - [Administration LDAP depuis le compte admin](#administration-ldap-depuis-le-compte-admin)
+   - [Ajouter une entrée dans la base LDAP](#ajouter-une-entrée-dans-la-base-ldap)
+   - [Connexion sur compte utilisateur](#connexion-sur-compte-utilisateur)
+   - [Intégrer la base de données Wordpress](#intégrer-la-base-de-données-wordpress)
+   - [Connexion en tant qu'admin sur Wordpress](#connexion-en-tant-quadmin-sur-wordpress)
+   - [Connexion en tant qu'utilisateur normale](#connexion-en-tant-quutilisateur-normale)
 
 ---
 
@@ -93,13 +100,15 @@ Une fois fait, il pourra voir son nouveau numéro de téléphone s'afficher.
 
 ---
 
-## Intégrer la base de données Wordpress
-Se connecter en root sur mariadb :
-sudo mariadb -u root -p
+## Wordpress
+> [!TIP]
+> Pour intégrer la base de données `wordpress.sql` dans votre base de données, taper la commande suivante :
+> ```bash
+> cat wordpress.sql | mariadb -u <user> -p
+> ```
+> Remplacer `<user>` par l'utilisateur admin de votre base de données.
 
----
-
-## Connexion en tant qu'admin sur Wordpress
+### Connexion en tant qu'admin sur Wordpress
 > [!IMPORTANT]
 > Wordpress a été relier avec la base LDAP depuis le plugin `Active Directory Integration / LDAP Integration`. Cependant le compte admin est wp-admin et non pas admin. Uniquement les entrées qui se trouvent dans la branche `People` peuvent renseigner leur uid et mot de passe pour se connecter sur leur compte `Wordpress`.
 
@@ -109,8 +118,6 @@ En login il faudra mettre `wp-admin` et mot de passe `wp-adminPassword`
 Une fois l'admin connecté, il pourra avoir avoir accès à son espace Wordpress.
 ![9(wordpresswpadmin)](https://github.com/user-attachments/assets/af6802cd-5fdc-4a13-b007-19a5a19bd836)
 
----
-
-## Connexion en tant qu'utilisateur normale
+### Connexion en tant qu'utilisateur normale
 Pour que l'utilisateur se connecte sur son espace Wordpress, il faut qu'il rentre en login son `uid`, donc son `prénom.nom`, puis son mot de passe et il arrivera sur son espace Wordpress.
 ![16(connectasuserwordpress)](https://github.com/user-attachments/assets/88e0c04c-40a1-41b5-b6dd-342ea15f8e50)
