@@ -20,14 +20,13 @@ Ce projet consiste à mettre en place un annuaire `LDAP` *_(Lightweight Director
 
 ---
 
-## Interface de connexion
+## Interface de connexion admin
 Il est possible de se connecter en tant que :
    - `admin`
    - `utilisateur`
    - `anonyme`
 
 ![1](https://github.com/user-attachments/assets/c9706917-c27e-4c00-a1fd-c34a01ea9234)
-![6(testlogin)](https://github.com/user-attachments/assets/83852494-28d2-4e91-9a9c-b1f8c8456492)
 
 > [!IMPORTANT]
 > Les `uid` des comptes utilisateurs sont composés comme telle : `prenom.nom`.  
@@ -77,21 +76,41 @@ Maintenant, si on cherche l'utilisateur qu'on vient de supprimer (`test.test`) o
 ---
 
 ## Connexion sur compte utilisateur
+On se connecte sur le compte d'un utilisateur en renseignant son `First Name`, `Last Name` et son mot de passe.
+![6(testlogin)](https://github.com/user-attachments/assets/83852494-28d2-4e91-9a9c-b1f8c8456492)
+
+Une fois connecter, l'utilisateur sera en mesure de voir le groupe auquel il appartient, son numéro de téléphone et son mail.
 ![7(test)](https://github.com/user-attachments/assets/6cae1cc6-e995-4623-81c2-c0957d163b70)
+
+Il sera en capacité de changer son numéro de téléphone s'il le souhaite en cliquant sur le crayon pour modifier, renseigne un nouveau numéro de téléphone, le code pays, puis rentre son mot de passe pour confirmer la modification.
 ![11(usermodify)](https://github.com/user-attachments/assets/b1c4eb1e-379b-49a6-a5c8-30e71cc9182d)
+
+Une fois fait, il pourra voir son nouveau numéro de téléphone s'afficher.
 ![12(afterusermodified)](https://github.com/user-attachments/assets/0efb27b7-90ab-43c5-99ec-90a0364ae29e)
+
+> [!NOTE]
+> Le groupe auquel un utilisateur appartient ne donnera pas de "privilèges", même s'il fait partie du groupe `Administratifs`.
 
 ---
 
-## Connexion en tant qu'admin
+## Intégrer la base de données Wordpress
+Se connecter en root sur mariadb :
+sudo mariadb -u root -p
+
+---
+
+## Connexion en tant qu'admin sur Wordpress
+> [!IMPORTANT]
+> Wordpress a été relier avec la base LDAP depuis le plugin `Active Directory Integration / LDAP Integration`. Cependant le compte admin est wp-admin et non pas admin. Uniquement les entrées qui se trouvent dans la branche `People` peuvent renseigner leur uid et mot de passe pour se connecter sur leur compte `Wordpress`.
+
+En login il faudra mettre `wp-admin` et mot de passe `wp-adminPassword`
 ![8(wordpresslogin)](https://github.com/user-attachments/assets/52db2332-7bdb-41b9-80e9-01f557875f65)
+
+Une fois l'admin connecté, il pourra avoir avoir accès à son espace Wordpress.
 ![9(wordpresswpadmin)](https://github.com/user-attachments/assets/af6802cd-5fdc-4a13-b007-19a5a19bd836)
 
 ---
 
 ## Connexion en tant qu'utilisateur normale
+Pour que l'utilisateur se connecte sur son espace Wordpress, il faut qu'il rentre en login son `uid`, donc son `prénom.nom`, puis son mot de passe et il arrivera sur son espace Wordpress.
 ![16(connectasuserwordpress)](https://github.com/user-attachments/assets/88e0c04c-40a1-41b5-b6dd-342ea15f8e50)
-
-Pour se connecter sur un compte LDAP (sauf admin), il suffit de mettre le `UID` de l'utilisateur. Donc si le `UID` est `test.test` et mot de passe est `testt`, alors il faudra juste mettre :
->    - Login : test.test
->    - Password : testt
