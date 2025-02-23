@@ -16,3 +16,20 @@ Ce projet consiste à mettre en place un annuaire `LDAP` *_(Lightweight Director
 
 ---
 
+![1](https://github.com/user-attachments/assets/c9706917-c27e-4c00-a1fd-c34a01ea9234)
+![2](https://github.com/user-attachments/assets/c2db179c-3639-444b-b9ba-a053d6fb2a80)
+![3](https://github.com/user-attachments/assets/a8878670-7a2d-4552-9b9c-e1736171516f)
+![4(admin)](https://github.com/user-attachments/assets/baaaea1b-5f3a-4044-910c-dd0476cf67d0)
+![5(admin)](https://github.com/user-attachments/assets/3c66097c-2666-49b2-beb6-ae528d632b0b)
+![6(testlogin)](https://github.com/user-attachments/assets/83852494-28d2-4e91-9a9c-b1f8c8456492)
+![7(test)](https://github.com/user-attachments/assets/6cae1cc6-e995-4623-81c2-c0957d163b70)
+![8(wordpresslogin)](https://github.com/user-attachments/assets/52db2332-7bdb-41b9-80e9-01f557875f65)
+![9(wordpresswpadmin)](https://github.com/user-attachments/assets/af6802cd-5fdc-4a13-b007-19a5a19bd836)
+![10(adminadd)](https://github.com/user-attachments/assets/e103e87f-6d8d-4e0a-ba5a-66eddc62dd53)
+![11(usermodify)](https://github.com/user-attachments/assets/b1c4eb1e-379b-49a6-a5c8-30e71cc9182d)
+![12(afterusermodified)](https://github.com/user-attachments/assets/0efb27b7-90ab-43c5-99ec-90a0364ae29e)
+![13(searchtestandmodify)](https://github.com/user-attachments/assets/1623c1db-a38f-4c66-b74d-86df9eb44905)
+![14(modifyphone)](https://github.com/user-attachments/assets/e6557de9-2740-4cea-b37f-b3c08aea83c3)
+![15(deleteuser)](https://github.com/user-attachments/assets/b0536418-33b4-43ca-91de-7370c6db1a4f)
+![15(showuserisdeleted)](https://github.com/user-attachments/assets/b4078d54-1d20-4704-bcee-ac70e3d115f1)
+![16(connectasuserwordpress)](https://github.com/user-attachments/assets/88e0c04c-40a1-41b5-b6dd-342ea15f8e50)
