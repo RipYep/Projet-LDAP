@@ -49,8 +49,9 @@ Une fois connecté sur le compte admin, on peut voir toutes les entrées de tout
    - `People` : Contient tous les comptes avec nom, prénom, email, téléphone, et action (pour supprimer un compte).
    - `Groups` : Contient le groupe auquel l'utilisateur appartient.
 
-![4(admin)](https://github.com/user-attachments/assets/baaaea1b-5f3a-4044-910c-dd0476cf67d0)
-![5(admin)](https://github.com/user-attachments/assets/3c66097c-2666-49b2-beb6-ae528d632b0b)
+![people](https://github.com/user-attachments/assets/d9a06a99-a3e6-4633-886d-3f5b1cbeeb18)
+![groups](https://github.com/user-attachments/assets/f03f7d01-0892-42de-acdb-2070b5f21bb1)
+
 > [!NOTE]
 > Il est possible de chercher un utilisateur soit en mettant juste son nom ou prénom, soit en mettant, par exemple, `te`, et tous les utilisateurs qui contiennent `te` dans leur `uid` seront affichés.  
 > Les recherches ne se font pas à partir de leur adresse mail, seulement depuis leur `uid`
